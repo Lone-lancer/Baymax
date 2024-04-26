@@ -1,0 +1,81 @@
+/*--------------------------------------------------------------
+18. Skill
+----------------------------------------------------------------*/
+.st-skill-title {
+  font-size: 36px;
+  margin-bottom: 17px;
+  margin-top: -7px;
+}
+
+.st-progressbar-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 3px;
+}
+
+.st-progressbar-title {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.st-progressbar-percentage {
+  color: $blue;
+  font-weight: 400;
+}
+
+.st-progressbar {
+  width: 100%;
+  height: 8px;
+  background-color: $black4;
+  padding: 2px;
+}
+
+.st-progressbar-in {
+  background-color: $blue;
+  height: 4px;
+}
+.swipe-arrow.st-style2 {
+  .slick-arrow-left,
+  .slick-arrow-right {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    opacity: 0;
+    color: $black2;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $black1;
+    }
+  }
+  .slick-arrow-right {
+    right: 30px;
+    padding-left: 2px;
+  }
+  .slick-arrow-left {
+    left: 30px;
+    padding-right: 2px;
+  }
+}
+.st-slider:hover {
+  .swipe-arrow.st-style2 {
+    .slick-arrow-left,
+    .slick-arrow-right {
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .st-skill-title {
+    font-size: 28px;
+  }
+}

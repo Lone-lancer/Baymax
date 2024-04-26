@@ -1,0 +1,92 @@
+.st-infobox-wrap {
+  position: relative;
+
+  .st-infobox.st-style1 {
+    position: absolute;
+    bottom: 11%;
+    left: 70px;
+  }
+}
+
+.st-infobox.st-style1 {
+  background-color: #0cb8b6;
+  color: #fff;
+  text-align: left;
+  max-width: 370px;
+  width: 100%;
+  padding: 25px 30px;
+
+  .st-infobox-text {
+    margin-bottom: 16px;
+  }
+
+  .st-infobox-call {
+    display: flex;
+    align-items: center;
+  }
+
+  .st-infobox-icon {
+    height: 54px;
+    width: 54px;
+    background-color: #fff;
+    color: #0cb8b6;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .st-infobox-right span {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .st-infobox-right h3 {
+    font-size: 30px;
+    color: #fff;
+    margin: 0;
+  }
+
+  &.st-type1 {
+    border-radius: 7px;
+  }
+
+  &.st-color1 {
+    background-color: $light-blue;
+
+    .st-infobox-icon {
+      color: $light-blue;
+    }
+  }
+
+  &.st-color2 {
+    background-color: $pink;
+
+    .st-infobox-icon {
+      color: $pink;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .st-infobox-wrap .st-infobox.st-style1 {
+    position: initial;
+    left: 0;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .st-infobox.st-style1 .st-infobox-icon {
+    height: 50px;
+    width: 50px;
+    font-size: 24px;
+    margin-right: 10px;
+    padding: 25px 20px;
+  }
+
+  .st-infobox.st-style1 .st-infobox-right h3 {
+    font-size: 24px;
+  }
+}

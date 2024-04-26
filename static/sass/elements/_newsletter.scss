@@ -1,0 +1,127 @@
+/*--------------------------------------------------------------
+25. Newsletter
+----------------------------------------------------------------*/
+.st-news-letter-form h5 {
+  display: none !important;
+}
+
+.st-news-letter {
+  max-width: 570px;
+  margin: auto;
+}
+
+.st-news-letter-number {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+  color: $blue;
+}
+
+.st-news-letter-form {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 0;
+
+  .subscription-label {
+    display: block;
+    width: 100%;
+    margin: 0;
+
+    &.error {
+      color: $red;
+    }
+  }
+
+  #subscriber-email {
+    border: 1px solid $black4;
+    border-radius: 7px;
+    padding: 0 20px;
+    height: 50px;
+    outline: none;
+    transition: all 0.3s ease;
+    flex: 1;
+    padding-right: 65px;
+    background-color: $white;
+
+    &:focus {
+      border-color: $blue;
+    }
+  }
+
+  .st-mailchimp-btn {
+    position: absolute;
+    right: 1px;
+    top: 7px;
+    border: none;
+    background-color: transparent;
+    height: 36px;
+    width: 55px;
+    padding: 0;
+    font-size: 18px;
+    color: $blue;
+    background-color: $white;
+    transition: all 0.3s ease;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 26px;
+      width: 1px;
+      background-color: $black4;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      outline: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+.st-contact-number {
+  padding-left: 55px;
+  position: relative;
+
+  i {
+    position: absolute;
+    left: 0;
+    font-size: 46px;
+    top: 3px;
+    color: $blue;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: $black2;
+    margin-top: -3px;
+    margin-bottom: 8px;
+  }
+
+  .st-mobile-number {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: $blue;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .st-news-letter-number {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .st-news-letter-form {
+    display: block;
+  }
+
+  .st-news-letter-form #subscriber-email {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}

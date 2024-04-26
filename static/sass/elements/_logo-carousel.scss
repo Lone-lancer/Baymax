@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------
+23. Logo carousel
+----------------------------------------------------------------*/
+.st-logo-carousel.st-style1 {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 7px;
+  transition: all 0.4s ease;
+  &.st-type1 {
+    border: none !important;
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+}

@@ -1,0 +1,257 @@
+/*--------------------------------------------------------------
+29. Tab
+----------------------------------------------------------------*/
+.st-tab-links.st-style1 {
+  display: flex;
+  margin-left: -5px;
+  margin-right: -5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 15px;
+
+  li {
+    flex: 1;
+    margin: 0 5px;
+
+    a {
+      text-align: center;
+      padding: 10px 15px;
+      height: 110px;
+      min-width: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 7px;
+      box-shadow: 0px 3px 8px 0px #fbfbfb;
+
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+
+      img {
+        height: 38px;
+      }
+
+      span {
+        display: block;
+        font-weight: 600;
+        color: $black1;
+        margin-top: 4px;
+        margin-bottom: -6px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        bottom: 0px;
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%) rotate(45deg);
+        border-radius: 0px 0px 7px 0px;
+        transition: all 0.3s ease;
+      }
+    }
+
+    &.active {
+      a {
+        span {
+          color: $white;
+        }
+
+        &:before {
+          bottom: -10px;
+          opacity: 1;
+        }
+
+        svg {
+          fill: #fff;
+        }
+
+        &.st-blue-box {
+          color: #fff;
+          background-color: $blue;
+
+          &:before {
+            background-color: $blue;
+          }
+        }
+
+        &.st-purple-box {
+          color: #fff;
+          background-color: $purple;
+
+          &:before {
+            background-color: $purple;
+          }
+        }
+
+        &.st-green-box {
+          color: #fff;
+          background-color: $green;
+
+          &:before {
+            background-color: $green;
+          }
+        }
+
+        &.st-red-box {
+          color: #fff;
+          background-color: $red;
+
+          &:before {
+            background-color: $red;
+          }
+        }
+
+        &.st-dip-blue-box {
+          color: #fff;
+          background-color: $dip-blue;
+
+          &:before {
+            background-color: $dip-blue;
+          }
+        }
+
+        &.st-orange-box {
+          color: #fff;
+          background-color: $orange;
+
+          &:before {
+            background-color: $orange;
+          }
+        }
+
+        &.st-gray-box {
+          color: #fff;
+          background-color: $gray;
+
+          &:before {
+            background-color: $gray;
+          }
+        }
+
+        &.st-pink-box {
+          color: #fff;
+          background-color: $pink;
+
+          &:before {
+            background-color: $pink;
+          }
+        }
+      }
+    }
+  }
+}
+
+.st-fade-tabs.st-style2 {
+  background: #f9fafc;
+  padding: 18px 30px 25px;
+}
+
+.st-tab-links.st-style2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  border-bottom: 1px solid $black3;
+
+  li {
+    margin: 0 35px;
+
+    &.active {
+      a {
+        color: $blue;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 0px;
+    position: relative;
+
+    &:after {
+      content: '';
+      height: 3px;
+      width: 0%;
+      background-color: $blue;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -2px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &.st-type1 {
+    font-size: 18px;
+    border: none;
+
+    li {
+      margin: 0px 20px;
+    }
+
+    a {
+      padding: 4px 8px;
+
+      &:after {
+        height: 2px;
+        bottom: 0;
+      }
+    }
+  }
+
+  &.st-color1 {
+    li.active a {
+      color: $light-blue;
+
+      &:after {
+        background-color: $light-blue;
+      }
+    }
+  }
+  &.st-color2 {
+    li.active a {
+      color: $pink;
+
+      &:after {
+        background-color: $pink;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .st-tab-links.st-style2 li {
+    margin: 0 10px;
+  }
+
+  .st-tab-links.st-style2.st-type1 li {
+    margin: 0px 10px;
+  }
+
+  .st-tab-links.st-style2.st-type1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .st-fade-tabs.st-style2 {
+    padding: 18px 20px 25px;
+  }
+
+  .st-tab-links.st-style2 {
+    font-size: 18px;
+  }
+}

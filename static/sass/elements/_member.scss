@@ -1,0 +1,201 @@
+/*--------------------------------------------------------------
+19. Member
+----------------------------------------------------------------*/
+.st-member.st-style1 {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid $black4;
+  transition: all 0.3s ease;
+  background-color: #fff;
+
+  .st-member-img {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .st-doctor-link {
+    display: block;
+    position: absolute;
+    background-color: $blue;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    top: 15px;
+    right: 15px;
+    height: 36px;
+    width: 36px;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0.4);
+    opacity: 0;
+  }
+
+  &:hover {
+    .st-zoom-in {
+      transform: scale(1.08);
+    }
+  }
+
+  .st-zoom-in {
+    width: 100%;
+    transition: all 1s ease;
+  }
+
+  .st-member-meta {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .st-member-name {
+    font-size: 20px;
+    margin-bottom: 4px;
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease;
+
+    a {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+
+  .st-member-designation {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease;
+  }
+
+  .st-member-social-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    .st-member-social-bg {
+      height: 110px;
+      width: 100%;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+  }
+
+  .st-member-social {
+    display: flex;
+    position: absolute;
+    font-size: 22px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    li {
+      margin: 0 10px;
+    }
+
+    a {
+      color: #fff;
+      transform: scale(0);
+      display: block;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &:hover {
+    .st-member-social {
+      a {
+        transform: scale(1);
+        transition-delay: 0.2s;
+      }
+    }
+
+    .st-member-social-wrap {
+      .st-member-social-bg {
+        opacity: 1;
+      }
+    }
+
+    .st-doctor-link {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  &.st-type1 {
+    border-radius: 0;
+    border: 10px solid #fff;
+  }
+
+  &.st-type1,
+  &.st-type2 {
+    .st-member-meta {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($blue, 0.8);
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    .st-member-name {
+      color: #fff;
+
+      a {
+        &:hover {
+          color: rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+
+    .st-member-designation {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    &:hover {
+      .st-member-meta {
+        opacity: 1;
+      }
+    }
+
+    &.st-color1 {
+      .st-member-meta {
+        background-color: rgba($light-blue, 0.8);
+      }
+    }
+
+    &.st-color2 {
+      .st-member-meta {
+        background-color: rgba($pink, 0.8);
+      }
+    }
+  }
+
+  &.st-color1 {
+    .st-doctor-link {
+      background-color: $light-blue;
+    }
+  }
+
+  &.st-color2 {
+    .st-doctor-link {
+      background-color: $pink;
+    }
+
+    .st-member-name a:hover {
+      color: $pink;
+    }
+  }
+}

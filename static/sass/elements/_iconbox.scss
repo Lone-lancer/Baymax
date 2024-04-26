@@ -1,0 +1,77 @@
+/*--------------------------------------------------------------
+10. Icon box
+----------------------------------------------------------------*/
+.st-iconbox.st-style1 {
+  text-align: center;
+  padding: 30px 30px 25px;
+  border-radius: 7px;
+  transition: all 0.4s ease;
+  border: 1px solid $black4;
+  background-color: $white;
+
+  &:hover {
+    border-color: transparent;
+    box-shadow: 0px 1px 30px 0px rgba(112, 112, 112, 0.15);
+  }
+
+  .st-iconbox-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    margin: auto;
+    font-size: 50px;
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+
+    svg {
+      width: 52px;
+    }
+  }
+
+  .st-iconbox-title {
+    font-weight: 600;
+    line-height: 1.2em;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  &.st-type1 {
+    margin-top: 50px;
+    padding-top: 0;
+
+    .st-iconbox-icon {
+      background-color: $blue;
+      color: #fff;
+      position: relative;
+      top: -50px;
+      margin-bottom: -25px;
+    }
+  }
+
+  &.st-type2 {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 0;
+    max-width: 300px;
+
+    &:hover {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .st-iconbox-icon {
+      font-size: 50px;
+      margin-left: 0;
+      height: 72px;
+      width: 72px;
+
+      svg {
+        width: 38px;
+      }
+    }
+  }
+}

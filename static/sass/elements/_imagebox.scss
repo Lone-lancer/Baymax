@@ -1,0 +1,97 @@
+/*--------------------------------------------------------------
+14. Image Box
+----------------------------------------------------------------*/
+.st-imagebox.st-style1 {
+  text-align: center;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px 0px rgba(106, 106, 106, 0.15);
+
+  .st-imagebox-img {
+    display: block;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .st-imagebox-info {
+    padding: 25px 30px;
+  }
+
+  .st-imagebox-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+
+    a {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.st-imagebox.st-style2 {
+  .st-imagebox-text {
+    margin-bottom: 33px;
+  }
+
+  .st-imagebox-title {
+    font-size: 32px;
+    margin-bottom: 6px;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  .st-imagebox-subtitle {
+    font-size: 15px;
+    line-height: 1.6em;
+    margin-bottom: 17px;
+  }
+
+  .st-imagebox-info {
+    margin-bottom: 33px;
+  }
+}
+
+.st-imagebox.st-style3 {
+  .st-imagebox-img {
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 10px solid #fff;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .st-imagebox-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  &.st-type1 {
+    background-color: #f8f8fb;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .st-imagebox-img {
+      overflow: hidden;
+      border: none;
+    }
+
+    .st-imagebox-info {
+      padding: 0 30px 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .st-imagebox.st-style2 .st-imagebox-title {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+}

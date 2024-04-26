@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap");
+body,
+.st-copyright-text {
+  font-size: 16px;
+  line-height: 1.8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.st-ternary-font {
+  font-family: "Spectral", serif;
+  font-weight: bold;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1270px;
+  }
+}
+.st-member.st-style1 .st-member-name,
+.st-post.st-style3 .st-post-title,
+.st-footer-widget-title,
+.st-imagebox.st-style3 .st-imagebox-title,
+.st-testimonial-name {
+  font-size: 22px;
+}
+
+.st-testimonial-name {
+  margin-bottom: 5px;
+}
+
+.st-infobox.st-style1 .st-infobox-right span {
+  margin-bottom: -2px;
+}
+
+.st-doctor-name {
+  font-size: 26px;
+}
+
+.st-post-details.st-style1 h2 {
+  font-size: 30px;
+}/*# sourceMappingURL=theme_type1.css.map */

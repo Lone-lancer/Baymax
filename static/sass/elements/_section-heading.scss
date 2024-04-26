@@ -1,0 +1,168 @@
+/*--------------------------------------------------------------
+9. Section Heading
+----------------------------------------------------------------*/
+.st-section-heading.st-style1 {
+  text-align: center;
+
+  .st-section-heading-title {
+    font-size: 36px;
+    margin-bottom: 0;
+    margin-top: -8px;
+  }
+
+  .st-section-heading-subtitle {
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+}
+
+.st-section-heading.st-style2 {
+  text-align: center;
+  overflow: hidden;
+
+  .st-section-heading-subtitle {
+    font-size: 18px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+    color: $light-blue;
+    padding: 0 10px;
+
+    &:after,
+    &:before {
+      content: '';
+      height: 1px;
+      width: 100px;
+      background-color: #475874;
+      position: absolute;
+      bottom: 8px;
+    }
+
+    &:after {
+      left: 100%;
+    }
+
+    &:before {
+      right: 100%;
+    }
+
+    span {
+      &:after,
+      &:before {
+        content: '';
+        height: 1px;
+        width: 50px;
+        background-color: $light-blue;
+        position: absolute;
+        bottom: 10px;
+      }
+
+      &:after {
+        left: 100%;
+      }
+
+      &:before {
+        right: 100%;
+      }
+    }
+  }
+
+  .st-section-heading-title {
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+}
+
+.st-section-heading-seperator {
+  width: 70px;
+  height: 1px;
+  background-color: $black1;
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.st-seperator {
+  width: 130px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 15px;
+
+  .st-seperator-left,
+  .st-seperator-right {
+    background-color: $blue;
+    height: 2px;
+    width: 42px;
+    flex: none;
+  }
+
+  .st-seperator-center {
+    margin: 0 15px;
+    animation: rotateAnimation 6s linear infinite;
+  }
+}
+
+@keyframes rotateAnimation {
+  0% {
+    -webkit-transform: rotateX(-20deg) rotateY(0deg);
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+
+  75% {
+    -webkit-transform: rotateX(-20deg) rotateY(360deg);
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+
+  100% {
+    -webkit-transform: rotateX(-20deg) rotateY(360deg);
+    transform: rotateX(-20deg) rotateY(360deg);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .st-section-heading.st-style1 .st-section-heading-title {
+    font-size: 28px;
+    margin-top: -6px;
+  }
+
+  .st-section-heading.st-style1 .st-section-heading-subtitle {
+    font-size: 15px;
+  }
+
+  .st-section-heading.st-style2 .st-section-heading-title {
+    font-size: 28px;
+  }
+
+  .st-section-heading.st-style2 .st-section-heading-subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .st-section-heading.st-style2 .st-section-heading-title {
+    font-size: 28px;
+    br {
+      display: none;
+    }
+  }
+
+  .st-section-heading.st-style2 .st-section-heading-subtitle:after,
+  .st-section-heading.st-style2 .st-section-heading-subtitle:before {
+    bottom: 9px;
+  }
+
+  .st-section-heading.st-style2 .st-section-heading-subtitle span:after,
+  .st-section-heading.st-style2 .st-section-heading-subtitle span:before {
+    bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .st-section-heading.st-style1 .st-section-heading-subtitle br {
+    display: none;
+  }
+}
+
+/* End Section Heading */

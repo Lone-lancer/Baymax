@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1270px;
+  }
+}/*# sourceMappingURL=theme_type3.css.map */

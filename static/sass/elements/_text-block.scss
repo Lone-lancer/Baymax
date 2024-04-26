@@ -1,0 +1,136 @@
+/*--------------------------------------------------------------
+11. Text Block
+----------------------------------------------------------------*/
+.st-text-block.st-style1 {
+  .st-text-block-subtitle {
+    font-size: 18px;
+    color: $blue;
+    margin-bottom: 0;
+  }
+
+  .st-text-block-title {
+    font-size: 32px;
+    margin-bottom: -4px;
+  }
+
+  .st-text-block-text {
+    p {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.st-space1 {
+    padding-left: 20px;
+  }
+
+  &.st-type1 {
+    .st-text-block-title {
+      font-size: 48px;
+      margin-bottom: 0;
+    }
+
+    .st-text-block-text {
+      font-size: 16px;
+      line-height: 1.6em;
+    }
+  }
+}
+
+.st-list.st-style1 li {
+  line-height: 1.6em;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.st-list.st-style2 {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    position: relative;
+    width: 50%;
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+    }
+  }
+
+  &.st-color1 {
+    li {
+      i {
+        color: $light-blue;
+      }
+    }
+  }
+}
+
+.st-list.st-style1 li:before {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: $blue;
+  top: 8px;
+  left: 0;
+}
+
+.st-text-block-avatar {
+  display: flex;
+  align-items: center;
+
+  .st-avatar-name {
+    margin-bottom: 2px;
+    font-size: 20px;
+    line-height: 1.4em;
+    color: $blue;
+  }
+
+  .st-avatar-designation {
+    font-size: 15px;
+    line-height: 1.6em;
+  }
+
+  .st-avatar-img {
+    flex: none;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .st-text-block.st-style1 .st-text-block-title {
+    font-size: 24px;
+  }
+
+  .st-text-block.st-style1.st-type1 .st-text-block-title {
+    font-size: 28px;
+  }
+
+  .st-text-block.st-style1.st-space1 {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .st-list.st-style2 li {
+    width: 100%;
+  }
+}

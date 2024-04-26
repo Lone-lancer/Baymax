@@ -1,0 +1,102 @@
+/*--------------------------------------------------------------
+12. Text Block
+----------------------------------------------------------------*/
+.st-shedule-wrap {
+  padding: 20px;
+  background: $black5;
+  margin-left: 30px;
+
+  &.st-type1 {
+    padding: 0;
+    background: #f9f9f9;
+
+    .st-shedule {
+      border: 10px solid #fff;
+    }
+  }
+  &.st-type2 {
+    padding: 0;
+    background: #fff;
+
+    .st-shedule {
+      border: 1px solid $black4;
+      border-radius: 5px;
+    }
+  }
+  &.st-color1 {
+    .st-shedule-title {
+      color: $light-blue;
+    }
+  }
+  &.st-color2 {
+    .st-shedule-title {
+      color: $pink;
+    }
+  }
+}
+
+.st-shedule {
+  border: 1px solid $blue;
+  padding: 30px 20px;
+}
+
+.st-shedule-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $blue;
+  margin-bottom: 8px;
+}
+
+.st-shedule-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $black3;
+    padding: 10px 0;
+  }
+}
+
+.st-call.st-style1 {
+  display: flex;
+  align-items: center;
+
+  .st-call-icon {
+    flex: none;
+    width: 32px;
+    margin-right: 15px;
+
+    svg {
+      fill: $black1;
+    }
+  }
+
+  .st-call-title {
+    font-size: 15px;
+    margin-bottom: 1px;
+    line-height: 1.2em;
+  }
+
+  .st-call-number {
+    font-size: 18px;
+    font-weight: 700;
+    color: $blue;
+  }
+}
+
+.st-shedule-wrap.st-style1 {
+  margin-left: 0;
+}
+
+.st-shedule-wrap.st-style2 {
+  margin-left: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .st-shedule-wrap {
+    margin-left: 0;
+  }
+}

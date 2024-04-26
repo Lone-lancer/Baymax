@@ -1,0 +1,71 @@
+/*--------------------------------------------------------------
+31. Accordian
+----------------------------------------------------------------*/
+.st-accordian-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: -4px;
+}
+
+.st-faq-img {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+.st-accordian {
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .st-accordian-toggle {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+    color: $black3;
+    transition: all 0.3s ease;
+  }
+
+  .st-accordian-title {
+    border: 1px solid $black4;
+    padding: 12px 20px;
+    font-weight: 600;
+    color: $black1;
+    position: relative;
+    padding-right: 30px;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: $white;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $blue;
+      background-color: rgba($blue, 0.1);
+    }
+  }
+
+  .st-accordian-body {
+    border: 1px solid $black4;
+    padding: 22px 20px;
+    margin-top: -1px;
+    background-color: $white;
+    border-radius: 0 0 7px 7px;
+  }
+
+  &.active {
+    .st-accordian-title {
+      color: $white;
+      background-color: $blue;
+      border-color: $blue;
+      pointer-events: none;
+      border-radius: 7px 7px 0 0;
+    }
+
+    .st-accordian-toggle {
+      transform: rotate(180deg);
+      color: $white;
+    }
+  }
+}

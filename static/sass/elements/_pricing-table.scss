@@ -1,0 +1,232 @@
+/*--------------------------------------------------------------
+21. Pricing Table
+----------------------------------------------------------------*/
+.st-pricing-table.st-style1 {
+  background-color: $white;
+  box-shadow: 0px 5px 10px 0px rgba(106, 106, 106, 0.15);
+  text-align: center;
+  border-radius: 7px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  .st-pricing-head {
+    margin-bottom: 20px;
+    position: relative;
+    height: 160px;
+
+    .st-pricing-head-shape {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .st-price {
+    font-size: 60px;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+    padding-top: 22px;
+  }
+
+  .st-price-per {
+    font-size: 16px;
+    color: $black3;
+    font-weight: 400;
+    transition: all 0.4s ease;
+  }
+
+  .st-pricing-feature-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .st-pricing-feature-list {
+    margin-bottom: 24px;
+
+    li {
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    i {
+      margin-right: 8px;
+      color: $black3;
+      font-size: 13px;
+
+      &.fa-check {
+        color: $green;
+      }
+
+      &.fa-times {
+        color: $red;
+      }
+    }
+  }
+}
+
+.st-pricing-wrap:hover {
+  .st-pricing-table:hover {
+    transform: scale(1);
+    opacity: 1;
+
+    .st-btn {
+      background-color: $blue;
+      color: $white;
+    }
+
+    .st-price {
+      color: $white;
+    }
+
+    .st-price-per {
+      color: rgba($white, 0.8);
+    }
+  }
+}
+
+.st-pricing-table.st-style1.st-active {
+  transform: scale(0.92);
+  opacity: 0.5;
+}
+
+.st-pricing-table.st-style1.st-active.no-hover {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.st-pricing-table.st-style2 {
+  background-color: #fff;
+  border: 10px solid #fff;
+  display: flex;
+
+  .st-pricing-left {
+    width: 50%;
+  }
+
+  .st-pricing-right {
+    flex: 1;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+
+  .st-pricing-img {
+    min-height: 435px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .st-pricing-title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.8em;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    color: $black1;
+  }
+
+  .st-pricing-list-head {
+    display: flex;
+    justify-content: space-between;
+    color: $blue;
+    background-color: rgba($blue, 0.1);
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-bottom: 18px;
+  }
+
+  .st-pricing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      padding: 5px 20px;
+      transition: all 0.4s ease;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: rgba($blue, 0.1);
+        color: $blue;
+      }
+    }
+  }
+
+  &.st-color1 {
+    .st-pricing-list-head {
+      background-color: rgba($light-blue, 0.1);
+      color: $light-blue;
+    }
+
+    .st-pricing-list {
+      li {
+        &:hover {
+          background-color: rgba($light-blue, 0.1);
+          color: $light-blue;
+        }
+      }
+    }
+  }
+
+  &.st-color2 {
+    .st-pricing-list-head {
+      background-color: rgba($pink, 0.1);
+      color: $pink;
+    }
+
+    .st-pricing-list {
+      li {
+        &:hover {
+          background-color: rgba($pink, 0.1);
+          color: $pink;
+        }
+      }
+    }
+  }
+
+  &.st-type1 {
+    background-color: #f8f8fb;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+
+    .st-pricing-right {
+      padding-right: 20px;
+    }
+
+    .st-pricing-title {
+      margin-top: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .st-pricing-table.st-style2 {
+    flex-direction: column;
+  }
+
+  .st-pricing-table.st-style2 .st-pricing-right {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .st-pricing-table.st-style2 .st-pricing-left {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

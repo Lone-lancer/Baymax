@@ -1,0 +1,118 @@
+/*--------------------------------------------------------------
+32. Before After Slider
+----------------------------------------------------------------*/
+.st-before-after-wrap {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: $white;
+    bottom: 0;
+    left: 0;
+  }
+  &.st-color1 {
+    &:before {
+      background: #f9f9f9;
+    }
+  }
+}
+.st-before-after {
+  max-width: 760px;
+  width: 100%;
+  position: relative;
+  height: 450px;
+  border: 10px solid #fff;
+  margin: auto;
+  border-radius: 7px;
+  box-shadow: 0px 2px 9.5px 0.5px rgba(0, 0, 0, 0.15);
+}
+
+.st-before-after:before,
+.st-before-after:after {
+  content: '';
+  position: absolute;
+  height: calc(50% - 25px);
+  width: 100%;
+  z-index: 2;
+  left: 0;
+}
+
+.st-before-after:before {
+  top: 0;
+}
+
+.st-before-after:after {
+  bottom: 0;
+}
+
+.st-before-after .st-single-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.st-before-after .st-single-slide.st-before {
+  right: 50%;
+}
+
+.st-before-after .st-handle-before-after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  left: 50%;
+  margin-left: -15px;
+  cursor: ew-resize;
+}
+
+.st-handle-before-after span {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.st-before-after .st-handle-before-after:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  margin-left: -1px;
+  background: #fff;
+}
+
+.st-handle-before-after span:before,
+.st-handle-before-after span:after {
+  content: '';
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid #222;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 14px;
+}
+
+.st-handle-before-after span:before {
+  left: 25px;
+}
+
+.st-handle-before-after span:after {
+  transform: translateY(-50%) rotate(180deg);
+}

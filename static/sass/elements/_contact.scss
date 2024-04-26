@@ -1,0 +1,276 @@
+/*--------------------------------------------------------------
+26. Contact Form
+----------------------------------------------------------------*/
+.st-form-field.st-style1 {
+  margin-bottom: 23px;
+  position: relative;
+
+  input,
+  textarea,
+  select {
+    display: block;
+    height: 42px;
+    border: 1px solid $black4;
+    border-radius: 7px;
+    width: 100%;
+    padding: 10px 15px;
+    color: $black1;
+    transition: all 0.3s ease;
+
+    &:focus {
+      border-color: $blue;
+      outline: none;
+    }
+  }
+
+  &.st-color1 {
+    input,
+    textarea,
+    select {
+      &:focus {
+        border-color: $light-blue;
+      }
+    }
+  }
+
+  &.st-color2 {
+    input,
+    textarea,
+    select {
+      &:focus {
+        border-color: $pink;
+      }
+    }
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: $black2;
+    margin-bottom: 3px;
+  }
+
+  #submit {
+    margin-top: -3px;
+  }
+
+  .form-field-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+    color: $black3;
+  }
+}
+
+::placeholder {
+  color: $black3;
+}
+
+:-ms-input-placeholder {
+  color: $black3;
+}
+
+::-ms-input-placeholder {
+  color: $black3;
+}
+
+.st-form-field.st-style2 {
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.st-form-field.st-style2 input,
+.st-form-field.st-style2 textarea,
+.st-form-field.st-style2 select {
+  font-size: 14px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 0;
+  padding: 10px 0px;
+  color: #fff;
+  background-color: transparent;
+  padding-top: 0;
+}
+
+.st-form-field.st-style2 input:focus,
+.st-form-field.st-style2 textarea:focus,
+.st-form-field.st-style2 select:focus {
+  outline: none;
+}
+
+.st-form-field.st-style2 label {
+  color: $black2;
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 20px;
+  top: 10px;
+  margin: 0;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.st-form-field.st-style2 input:focus ~ label,
+.st-form-field.st-style2 input:valid ~ label,
+.st-form-field.st-style2 textarea:focus ~ label,
+.st-form-field.st-style2 textarea:valid ~ label,
+.st-form-field.st-style2 select:focus ~ label,
+.st-form-field.st-style2 select:valid ~ label {
+  top: -20px;
+  left: 0px;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  background-color: $blue;
+  line-height: 20px;
+  padding: 0 8px;
+}
+
+.st-form-field.st-style2 .bar {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #2caee2;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.st-form-field.st-style2 input:focus ~ .bar,
+.st-form-field.st-style2 textarea:focus ~ .bar,
+.st-form-field.st-style2 select:focus ~ .bar {
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.st-form-field.st-style2 textarea::-webkit-input-placeholder,
+.st-form-field.st-style2 select::-webkit-input-placeholder,
+.st-form-field.st-style2 input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.st-form-field.st-style2 textarea::-moz-placeholder,
+.st-form-field.st-style2 select::-moz-placeholder,
+.st-form-field.st-style2 input::-moz-placeholder {
+  color: #fff;
+}
+
+.st-form-field.st-style2 textarea:-ms-input-placeholder,
+.st-form-field.st-style2 select:-ms-input-placeholder,
+.st-form-field.st-style2 input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.st-form-field.st-style2 textarea:-moz-placeholder,
+.st-form-field.st-style2 select:-moz-placeholder,
+.st-form-field.st-style2 input:-moz-placeholder {
+  color: #fff;
+}
+
+.st-contact-form .st-form-field.st-style2 input,
+.st-contact-form .st-form-field.st-style2 textarea,
+.st-contact-form .st-form-field.st-style2 selec {
+  border: 1px solid $black4;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  color: $black2;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.st-contact-form .st-form-field.st-style2 textarea {
+  height: 227px;
+}
+
+.st-contact-form .st-form-field.st-style2 input:focus,
+.st-contact-form .st-form-field.st-style2 textarea:focus,
+.st-contact-form .st-form-field.st-style2 select:focus,
+.st-contact-form .st-form-field.st-style2 input:valid,
+.st-contact-form .st-form-field.st-style2 textarea:valid {
+  border-color: $blue;
+}
+
+.st-contact-info-title,
+.st-shidule-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: -3px;
+}
+
+.st-contact-info-list {
+  li {
+    padding-left: 26px;
+    position: relative;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    i {
+      position: absolute;
+      top: 4px;
+      font-size: 16px;
+      left: 0;
+      color: $blue;
+    }
+
+    a {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+
+.st-shidule-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    content: '.......................';
+    position: absolute;
+    left: 100px;
+    top: -4px;
+    color: $black3;
+  }
+}
+
+.st-contact-info,
+.st-shidule {
+  padding-left: 10px;
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid $blue;
+  background: $white;
+  padding: 0 10px 5px;
+  border-radius: 7px;
+  margin-top: -1px;
+}
+
+/*End Special Input*/

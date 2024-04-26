@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+20. CTA
+----------------------------------------------------------------*/
+.st-cta.st-style1 {
+  .st-cta-title {
+    font-size: 36px;
+    margin-bottom: 16px;
+  }
+  .st-cta-subtitle {
+    font-size: 16px;
+    margin-bottom: 33px;
+    line-height: 1.6em;
+  }
+}
+@media screen and (max-width: 991px) {
+  .st-cta.st-style1 .st-cta-title {
+    font-size: 28px;
+  }
+  .st-cta.st-style1 .st-cta-subtitle {
+    font-size: 14px;
+    margin-bottom: 23px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .st-cta.st-style1 .st-cta-subtitle br {
+    display: none;
+  }
+}
