@@ -55,7 +55,7 @@ BAYMAX | Login
 {% block content %}
 <div class="wrapper">
     <form class="form-signin" method="POST" action="/signup">
-        <h1>Login</h1>
+        <h1>Sign up</h1>
         {{ form.hidden_tag() }}
         <div class="input-box">
             {{ wtf.form_field(form.username, placeholder="Username") }}
@@ -71,7 +71,7 @@ BAYMAX | Login
         <br>
         <button class="btn" type="submit">Signup</button>
         <div class="register-link">
-            <p>Already have an account? <a href="/signup">Login</a></p>
+            <p>Already have an account? <a href="/login">Login</a></p>
         </div>
         <p class="back-home"><a href="/">Back Home</a></p>
     </form>
